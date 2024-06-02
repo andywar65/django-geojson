@@ -34,7 +34,7 @@ from django.utils.encoding import smart_str
 try:
     from django.contrib.gis.db.models.fields import GeometryField
     from django.contrib.gis.geos import GEOSGeometry, WKBWriter
-except (ImportError, ImproperlyConfigured):
+except (ImportError, ImproperlyConfigured, OSError):
     from .nogeos import WKBWriter
     from .nogeos import GEOSGeometry
     from .fields import GeometryField

@@ -8,7 +8,7 @@ from django.utils.translation import gettext_lazy as _
 try:
     from leaflet.forms.widgets import LeafletWidget
     HAS_LEAFLET = True
-except ImportError:
+except (ImportError, OSError):
     HAS_LEAFLET = False
 
 
